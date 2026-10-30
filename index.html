@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo | Login</title>
-</head>
-<body>
-    
-</body>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <!-- Tailwind Plus Daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <div class="logo w-[200px] mx-auto pt-32">
+      <img src="./assets/Logo-full.png" alt="" />
+    </div>
+
+    <div class="form pt-10">
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-xl"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset space-y-2">
+            <label id="input-number" class="label text-neutral font-bold">Mobile Number</label>
+            <input
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input bg-base-200 rounded-full"
+              placeholder="Enter your 11 digit number"
+            />
+            <label id="input-pin" class="label text-neutral font-bold">4 Digit Pin</label>
+            <input
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input bg-base-200 rounded-full"
+              placeholder="Enter 4 Digit Pin"
+            />
+            <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+            <button id="login-btn" class="btn btn-primary rounded-full mt-4">Login</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script/login.js"></script>
+  </body>
 </html>
