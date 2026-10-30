@@ -1,11 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
-</head>
-<body>
-    HomePage
-</body>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo | HomePage</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <!-- Tailwind Plus Daisy -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font awsome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+      integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <header class="border-b-2 border-gray-300">
+        <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
+            <div class="left flex gap-1">
+                <div class="img-div w-[60px]">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+
+                <div class="balance-info">
+                    <h2 class="text-2xl font-bold"><span id="balance">$ 45000</span></h2>
+                    <p class="text-neutral/50">Available Balance</p>
+                </div>
+            </div>
+            <div class="right">
+                <a href="./index.html" class="btn btn-soft"><span class="rotate-180"><i class="fa-solid fa-arrow-right-from-bracket"></i></span><span class="text-[#777777]">Log out</span></a>
+            </div>
+        </section>
+    </header>
+
+    <!-- After Header -->
+     <section class="w-11/12 mx-auto py-10 space-y-5">
+        <h2 class="text-2xl font-bold">Welcome to Pay<span class="text-primary">oo</span></h2>
+        <p class="text-neutral/50">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+
+        <!-- Working cards -->
+         <div class="buttons grid grid-cols-3 gap-3">
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-1.png" alt="">
+                <p>Add Money</p>
+            </button>
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-2.png" alt="">
+                <p>CashOut</p>
+            </button>
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-3.png" alt="">
+                <p>Transfer Money</p>
+            </button>
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-4.png" alt="">
+                <p>Get Bonus</p>
+            </button>
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-5.png" alt="">
+                <p>Pay Bill</p>
+            </button>
+            <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+                <img src="./assets/opt-6.png" alt="">
+                <p>Transactions</p>
+            </button>
+         </div>
+     </section>
+
+    <script src="./script/login.js"></script>
+  </body>
 </html>
