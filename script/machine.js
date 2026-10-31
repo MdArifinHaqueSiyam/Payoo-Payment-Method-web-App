@@ -24,10 +24,12 @@ function showOnly(id) {
     // console.log('Show only clicked')
     const addmoney = document.getElementById('add-money');
     const cashout = document.getElementById('cashout');
+    const history = document.getElementById('history');
 
     // sobai ke hide kore dao
     addmoney.classList.add('hidden');
     cashout.classList.add('hidden');
+    history.classList.add('hidden');
 
     // hidden class ta remove
     const selected = document.getElementById(id);

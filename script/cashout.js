@@ -1,45 +1,57 @@
-document.getElementById('cashout-btn').addEventListener('click', function () {
-    // 1-get the agent number and validate
-    const cashoutNumber = getValueFromInput('cashout-number');
+document.getElementById("cashout-btn").addEventListener("click", function () {
+  // 1-get the agent number and validate
+  const cashoutNumber = getValueFromInput("cashout-number");
 
-    if (cashoutNumber.length != 11) {
-        alert("Invalid Number");
-        return;
-    }
+  if (cashoutNumber.length != 11) {
+    alert("Invalid Number");
+    return;
+  }
 
-    // 2- get the cashout amount and validate
-    const cashoutAmount = getValueFromInput('cashout-amount');
+  // 2- get the cashout amount and validate
+  const cashoutAmount = getValueFromInput("cashout-amount");
 
-    // 3- get the current balance
-    // const balanceElement = document.getElementById('balance');
-    // const balance = balanceElement.innerText;
-    // console.log(balance);
+  // 3- get the current balance
+  // const balanceElement = document.getElementById('balance');
+  // const balance = balanceElement.innerText;
+  // console.log(balance);
 
-    const currentBalance = getBalance();
+  const currentBalance = getBalance();
 
-    // 4- calculate the current balance
-    const newBalance = currentBalance - Number(cashoutAmount);
-    console.log(newBalance);
+  // 4- calculate the current balance
+  const newBalance = currentBalance - Number(cashoutAmount);
+  console.log(newBalance);
 
-    if (newBalance < 0) {
-        alert("Invalid Amount");
-        return;
-    }
+  if (newBalance < 0) {
+    alert("Invalid Amount");
+    return;
+  }
 
-    // 5- get the pin and verify
-    const cashoutPin = getValueFromInput('cashout-pin');
+  // 5- get the pin and verify
+  const cashoutPin = getValueFromInput("cashout-pin");
 
-    if (cashoutPin == '9811') {
-        alert('cashout successfull');
-        // document.getElementById('balance').innerText = newBalance;
-        setBalance(newBalance);
-    } else {
-        alert('Invalid Pin');
-        return;
-    }
-})
+  if (cashoutPin == "9811") {
+    alert("cashout successfull");
+    // document.getElementById('balance').innerText = newBalance;
+    setBalance(newBalance);
 
+    // 1- history container ke dhore niye asbo
+    const history = document.getElementById("history-container");
+    // 2- new div create korbo
+    const newHistory = document.createElement("div");
+    // 3- new div innerHTML add korbo
+    newHistory.innerHTML = `
+        <div class="transaction-card p-5 bg-base-100">
+            Cashout ${cashoutAmount} TAKA to ${cashoutNumber} at ${new Date()}
 
+            </div>
+        `;
+    // 4- history container ke new div e append korbo
+    history.append(newHistory);
+  } else {
+    alert("Invalid Pin");
+    return;
+  }
+});
 
 // document.getElementById('cashout-btn').addEventListener('click', function () {
 //     // console.log('withdraw')
@@ -58,10 +70,10 @@ document.getElementById('cashout-btn').addEventListener('click', function () {
 //     // 3-get the current Balance, validate, convert to number
 //     const balanceElement = document.getElementById('balance');
 //     const balance = balanceElement.innerText;
-    
+
 //     // 4-Calculate current Balance
 //     const newBalance = Number(balance) - Number(cashoutAmount);
-    
+
 //     if (newBalance < 0) {
 //         alert("Invalid Amount");
 //         return;
