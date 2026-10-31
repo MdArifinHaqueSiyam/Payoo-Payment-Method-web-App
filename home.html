@@ -38,7 +38,7 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-300 sticky bg-base-200 top-0">
+    <header class="border-b-2 border-gray-300 sticky bg-base-200 top-0 z-10">
       <section class="w-11/12 mx-auto py-3 flex justify-between items-center">
         <div class="left flex gap-1">
           <div class="img-div w-[60px]">
@@ -101,7 +101,61 @@
       </div>
     </section>
 
-    <section id="cashout" class="w-11/12 mx-auto py-5">
+    <!-- Add money Section -->
+    <section id="add-money" class="w-11/12 mx-auto py-5">
+      <h2 class="text-xl font-bold">Add Money</h2>
+      <div class="form pt-10">
+        <div class="card bg-base-100 w-full shadow rounded-xl">
+          <div class="card-body">
+            <fieldset class="fieldset space-y-2">
+
+                <label class="label text-neutral font-bold">Select A Bank</label>
+              <select id="add-money-bank" class="select w-full bg-base-200 rounded-full">
+                <option disabled selected>Select Bank</option>
+                <option value="DBBL">DBBL</option>
+                <option value="IBBL">IBBL</option>
+                <option value="CITY">City Bank</option>
+              </select>
+
+              <label class="label text-neutral font-bold">Bank Account Number</label>
+              <input
+                id="add-money-number"
+                maxlength="11"
+                minlength="11"
+                type="text"
+                class="input bg-base-200 rounded-full w-full"
+                placeholder="Enter Agent 11 digit account number"
+              />
+              <label class="label text-neutral font-bold">Amount to add</label>
+              <input
+                id="add-money-amount"
+                type="number"
+                class="input bg-base-200 rounded-full w-full"
+                placeholder="Add Amount to withdraw"
+              />
+              <label class="label text-neutral font-bold">Pin Number</label>
+              <input
+                id="add-money-pin"
+                maxlength="4"
+                minlength="4"
+                type="password"
+                class="input bg-base-200 rounded-full w-full"
+                placeholder="Enter 4 Digit Pin"
+              />
+              <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
+              <button
+                id="add-money-btn"
+                class="btn btn-primary rounded-full mt-4"
+              >
+                Add Money
+              </button>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold">CashOut</h2>
       <div class="form pt-10">
         <div class="card bg-base-100 w-full shadow rounded-xl">
@@ -147,5 +201,6 @@
 
     <script src="./script/machine.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/addMoney.js"></script>
   </body>
 </html>
