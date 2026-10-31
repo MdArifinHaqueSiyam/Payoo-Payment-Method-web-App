@@ -74,11 +74,11 @@
 
       <!-- Working cards -->
       <div class="buttons grid grid-cols-3 gap-3">
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
           <img src="./assets/opt-1.png" alt="" />
           <p>Add Money</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
           <img src="./assets/opt-2.png" alt="" />
           <p>CashOut</p>
         </button>
@@ -102,7 +102,7 @@
     </section>
 
     <!-- Add money Section -->
-    <section id="add-money" class="w-11/12 mx-auto py-5">
+    <section id="add-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold">Add Money</h2>
       <div class="form pt-10">
         <div class="card bg-base-100 w-full shadow rounded-xl">
@@ -155,6 +155,7 @@
       </div>
     </section>
 
+    <!-- Cashout section -->
     <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-xl font-bold">CashOut</h2>
       <div class="form pt-10">
